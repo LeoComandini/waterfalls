@@ -11,7 +11,8 @@ categories = ["cryptography::cryptocurrencies"]
 
 [dependencies]
 clap = { version = "4.5.3", features = ["derive", "env"] }
-elements = { version = "0.25.0", features = ["serde"] }
+#elements = { version = "0.25.0", features = ["serde"] }
+elements = { git = "https://github.com/apoelstra/rust-elements.git", branch = "2025-08/semver-0.25", features = ["serde"] }
 bitcoin = { version = "0.32.5", features = [
     "secp-recovery",
     "base64",
@@ -30,7 +31,8 @@ rocksdb = { version = "0.24.0", features = [
     "zstd",
 ], optional = true }
 fxhash = "0.2.1"
-elements-miniscript = "0.4.0"
+#elements-miniscript = "0.4.0"
+elements-miniscript = { git = "https://github.com/leocomandini/elements-miniscript.git", branch = "test-semver-0.25" }
 miniscript = "12.3"
 serde = { version = "1.0.202", features = ["derive"] }
 serde_json = "1.0.117"
